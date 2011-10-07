@@ -30,5 +30,15 @@ class ChopTest extends JUnitSuite {
     assertEquals(-1, ch.chop(2, Array(1,3,5)))
     assertEquals(-1, ch.chop(4, Array(1,3,5)))
     assertEquals(-1, ch.chop(6, Array(1,3,5)))    
+    
+    assertEquals(0,  ch.chop(1, Array(1,3,5,7)))
+    assertEquals(1,  ch.chop(3, Array(1,3,5,7)))
+    assertEquals(2,  ch.chop(5, Array(1,3,5,7)))
+    assertEquals(3,  ch.chop(7, Array(1,3,5,7)))
+    assertEquals(-1, ch.chop(0, Array(1,3,5,7)))
+    assertEquals(-1, ch.chop(2, Array(1,3,5,7)))
+    assertEquals(-1, ch.chop(4, Array(1,3,5,7)))
+    assertEquals(-1, ch.chop(6, Array(1,3,5,7)))
+    assertEquals(-1, ch.chop(8, Array(1,3,5,7)))
   }
 }
